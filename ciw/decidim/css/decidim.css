@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+body {
+    font-size: 85%;
+    font-weight: 40;
+    font-family: 'Oswald', sans-serif; 
+    border: 5px solid #D8D8D8;
+}
+header {
+    border-bottom: 5px solid #D8D8D8;
+}
+h2 {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 3px 3px 3px #888;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+nav {
+    display: block;
+    background: #D8D8D8;
+    font-weight: bold;
+    float: left;
+    height: 500px;
+    opacity: 0.8;
+}
+nav>a,nav>a:visited {
+    display: block;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+    border: 2px solid #A1A1A1;
+    padding: 2px 5px;
+    background: #FFEAEA;
+    color: #DF3941;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #888888;
+}
+main a, main a:visited {
+    text-decoration: none;
+    color: #555;
+}
+section {
+    background-image: url("../media/globe.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+article {
+    padding: 20px;
+    margin-left: 100px;
+}
+footer {
+    font-size: 80%;
+    text-align: center;
+    clear: both;
+    border-top: 5px solid #D8D8D8;
+    margin-top: 0;
+    padding: 0;
+}
+footer a, footer a:visited {
+    text-decoration: none;
+    color: #FF3333;
+}
+.floatright {
+    float: right;
+    clear: right;
+    margin: 10px;
+}
+#img-rotate {
+    transform: rotate(345deg);
+}
+#video-rotate {
+    transform: rotate(15deg);
+}

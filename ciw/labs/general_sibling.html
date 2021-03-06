@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab: General Sibling Selector</title>
+<style>
+h3~p {
+    font-style: italic;
+}
+h4+p {
+    font-style: normal;
+    font-weight: bold;
+}
+a[href*="css"] {
+    color: orange;
+}
+footer {
+    text-align: center;
+}
+footer>a, footer>a:visited {
+    text-decoration: none;
+    color: #555;
+}
+</style>
+</head>
+<body>
+<h1>Heading 1</h1>
+<p>
+The paragraph text following Heading 1 is not affected by the CSS3 h3~p
+selector.
+</p>
+
+<h1>Heading 2</h1>
+<p>
+Nor is this paragraph text following Heading 2 not affected by the CSS3 h3~p
+selector.
+</p>
+
+<h3>Heading 3</h3>
+<p>
+The paragraph text following Heading 3 is affected and italicized by the CSS3
+h3~p selector.
+</p>
+<p>
+And so are the paragraphs that follow, like this one.
+</p>
+<p>
+And this one too... 
+</p>
+
+<h4>Heading 4</h4>
+<p>
+The paragraph text following Heading 4 is affected by the CSS3 h4+p selector,
+making it normal font-style and bold font-weight.
+</p>
+<p>
+But <i>not</i> the paragraphs that follow, like this one, which seem to go
+back to the previous style defined by h3~p.
+</p>
+<p>
+This one two... 
+</p>
+
+<h2>Heading 2</h2>
+<p>
+What happens if we add another h2? It still keeps the italized style!
+</p>
+<p>
+<a href="https://www.w3schools.com/">w3schools.com</a> has a nice reference:
+<a href="https://www.w3schools.com/cssref/css_selectors.asp">CSS Selector
+Reference</a>.
+</p>
+
+<footer>
+<a href="http://validator.w3.org/check?uri=http://students.gctaa.net/~jejemplo/ciw/labs/general_sibling.html">
+<strong> HTML </strong> Valid! </a> |
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=http://students.gctaa.net/~jejemplo/ciw/labs/general_sibling.html?profile=css3">
+<strong> CSS </strong> Valid! </a>
+</footer>
+
+</body>
+</html>
