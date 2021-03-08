@@ -7,6 +7,13 @@
 h1, footer {
     text-align: center;
 }
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+th {
+    background: #D8D8D8;
+}
 footer a, footer a:visited {
     text-decoration: none;
     color: #555;
@@ -15,6 +22,63 @@ footer a, footer a:visited {
 </head>
 <body>
 <h1>CSS Transitions I: 2D Transitions</h1>
+
+<table>
+<tr>
+  <th>2D Transform Method</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td>trotate(angle)</td>
+  <td>Rotates the element clockwise at the specified degree<br>
+      Negative values rotate the element counter-clockwise</td>
+</tr>
+<tr>
+  <td>scale(x,y)</td>
+  <td>Increases or decreases the size of the element, based on specified
+      parameters for width (x) and height (y)</td>
+</tr>
+<tr>
+  <td>scaleX(n)</td>
+  <td>Changes the element's width</td>
+</tr>
+<tr>
+  <td>scaleY(n)</td>
+  <td>Changes the element's height</td>
+</tr>
+<tr>
+  <td>matrix(n,n,n,n,n,n)</td>
+  <td>Combines all of the 2D transform methods into one<br>
+      Takes six parameters, containing mathematic functions, which enable the
+      element to rotate, scale, move (translate) and skew</td>
+</tr>
+<tr>
+  <td>translate(x,y)</td>
+  <td>Moves the element from its current position, based on the specified
+      parameters for the left (x) and top (y) position</td>
+</tr>
+<tr>
+  <td>translateX(n)</td>
+  <td>Moves the element along the X-axis (horizontally)</td>
+</tr>
+<tr>
+  <td>translateY(n)</td>
+  <td>Moves the element along the Y-axis (vertically)</td>
+</tr>
+<tr>
+  <td>skew(x-angle,y-angle)</td>
+  <td>Turns or skews the element to a specified angle, based on the specified
+      parameters for the horizontal (x) and vertical (y) lines</td>
+</tr>
+<tr>
+  <td>skewX(angle)</td>
+  <td>Turns or skews the element to a specified angle along its X-axis</td>
+</tr>
+<tr>
+  <td>skewY(angle)</td>
+  <td>Turns or skews the element to a specified angle along its Y-axis</td>
+</tr>
+</table>
 
 <section id="experiment1">
 <h2>Experiment 1</h2>
