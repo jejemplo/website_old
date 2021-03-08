@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <title>CSS Transitions I: 2D Transitions</title>
 <style>
+body {
+    margin: 40px;
+}
 h1, footer {
     text-align: center;
 }
@@ -17,16 +20,39 @@ th, td {
     border: 1px solid #555;
 }
 th {
-    background-color: #D8D8D8;
+    background-color: #FFEAEA;
 }
-footer a, footer a:visited {
+a, a:visited {
     text-decoration: none;
     color: #555;
+}
+section {
+    margin: 40px;
+    padding: 40px;
+    border: 1px dotted #555;
+    background-color: #FFEAEA;
+    width: 40%;
+}
+/* Experiments */
+section#experiment1 {
+    transform: skewX(30deg);
+}
+section#experiment2 {
+    transform: rotate(180deg);
+}
+section#experiment3 {
+    transform: translate(150px, -80px);
 }
 </style>
 </head>
 <body>
 <h1>CSS Transitions I: 2D Transitions</h1>
+<p>
+<b>2D transformations</b> in CSS3 implement visual changes to HTML elements
+that can be described mathematically by several common
+<a href="https://en.wikipedia.org/wiki/Geometric_transformation">
+geometric transformations</a>, as described in the table below.
+</p>
 
 <table>
 <tr>
@@ -34,7 +60,7 @@ footer a, footer a:visited {
   <th>Description</th>
 </tr>
 <tr>
-  <td>trotate(angle)</td>
+  <td>rotate(angle)</td>
   <td>Rotates the element clockwise at the specified degree<br>
       Negative values rotate the element counter-clockwise</td>
 </tr>
@@ -88,18 +114,25 @@ footer a, footer a:visited {
 <section id="experiment1">
 <h2>Experiment 1</h2>
 <p>
+In this first experiment I use
+<code>transform: skewX(30deg);</code> to cause this block to.
 </p>
 </section>
 
 <section id="experiment2">
 <h2>Experiment 2</h2>
 <p>
+In experiment II I use <code>transform: rotate(180deg);</code> to
+cause this block to appear upside down.
 </p>
 </section>
 
 <section id="experiment3">
 <h2>Experiment 3</h2>
 <p>
+This one gets moved (translated) down and to the right using
+<code>transform: translate(150px, -80px);</code>. Notice how it lays ontop
+of Experiment II.
 </p>
 </section>
 
