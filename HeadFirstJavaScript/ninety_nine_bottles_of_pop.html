@@ -17,23 +17,49 @@ a, a:visited {
     text-decoration: none;
     color: purple;
 }
+p#clickme {
+    margin-top: 60px;
+    text-align: center;
+}
+p#popsong {
+    font-size: xx-large;
+    text-align: center;
+}
 footer {
     margin-top: 10px;
     text-align: center;
 }
 </style>
+<script>
+var numBottles = 99;
+var word = "bottles";
+var verse = [
+    `${numBottles} ${word} of pop on the wall<br>`,
+    `${numBottles} ${word} of pop,<br>`,
+    "Take one down, pass it around,<br>",
+    `${(numBottles - 1)} ${word} of pop on the wall.`
+];
+
+function drinkBottle() {
+    verse.forEach(function(str) {
+        document.getElementById("popsong").innerHTML += str;
+    });
+}
+</script>
 </head>
 <body>
 <h1>99 Bottles of Pop</h1>
 <main>
-<p>
+<p id="popsong">
+</p><p id="clickme">
+<button onclick="drinkBottle()">Thirsty? Click Here</button>
 </p>
 </main>
 
 <footer>
-<a href="http://validator.w3.org/check?uri=https://jejemplo.github.io/website/xx">
+<a href="http://validator.w3.org/check?uri=https://jejemplo.github.io/website/HeadFirstJavaScript/ninety_nine_bottles_of_pop.html/">
 <strong> HTML </strong> Valid! </a> |
-<a href="http://jigsaw.w3.org/css-validator/validator?uri=https://jejemplo.github.io/website//xx?profile=css3">
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=https://jejemplo.github.io/website//HeadFirstJavaScript/ninety_nine_bottles_of_pop.html/?profile=css3">
 <strong> CSS </strong> Valid! </a>
 </footer>
 
