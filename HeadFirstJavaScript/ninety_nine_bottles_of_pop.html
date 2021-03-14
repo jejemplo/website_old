@@ -32,18 +32,29 @@ footer {
 </style>
 <script>
 var numBottles = 99;
-var word = "bottles";
-var verse = [
-    `${numBottles} ${word} of pop on the wall<br>`,
-    `${numBottles} ${word} of pop,<br>`,
-    "Take one down, pass it around,<br>",
-    `${(numBottles - 1)} ${word} of pop on the wall.`
-];
+
+function make_verse(n) {
+    var word = n == 1 ? "bottle" : "bottles";
+
+    var verse = `${n} ${word} of pop on the wall<br>`;
+    verse += `${n} ${word} of pop,<br>`;
+    verse += "Take one down, pass it around,<br>";
+
+    if (n == 2) {
+        word = "bottle";
+    }
+    if (n == 1) {
+        verse += "No more bottles of pop on the wall.";
+    }
+    else {
+        verse +=  `${(n - 1)} ${word} of pop on the wall.`
+    }
+    return verse;
+}
 
 function drinkBottle() {
-    verse.forEach(function(str) {
-        document.getElementById("popsong").innerHTML += str;
-    });
+    document.getElementById("popsong").innerHTML = make_verse(numBottles);
+    numBottles--;
 }
 </script>
 </head>
