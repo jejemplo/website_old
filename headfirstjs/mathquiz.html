@@ -22,6 +22,7 @@ p#clickme {
     text-align: center;
 }
 form {
+    display: none;
     text-align: center;
 }
 form > span {
@@ -39,10 +40,11 @@ footer {
 <body>
 <h1>Math Quiz</h1>
 <main>
-<form>
+<form id="quizForm">
 <span id="question"></span>
 <input type="text" id="answer" size="4">
-<input type="button" id="makeGuess" value="Submit">
+<input type="button" id="makeGuess" value="Submit"
+       onclick="getAnswer()">
 </form>
 <p id="clickme">
 <button onclick="startQuiz()">Wanna take a quiz? Click Here</button>

@@ -14,5 +14,11 @@ function makeQuestion() {
 
 function startQuiz() {
   var q = makeQuestion();
+  document.getElementById("clickme").style.display = "none";
+  document.getElementById("quizForm").style.display = "block";
   document.getElementById("question").innerHTML = q[0];
+}
+
+function getAnswer() {
+  console.log(document.getElementById('answer').value);
 }
