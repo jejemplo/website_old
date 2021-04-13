@@ -5,6 +5,7 @@ const NUMQS = 10;
 var correct = 0;
 var guess;
 var guesses = 0;
+var question = makeQuestion();
 
 function makeQuestion() {
   var mult1 = Math.floor((Math.random() * (UPPER + 1)) + LOWER);
@@ -12,13 +13,17 @@ function makeQuestion() {
   return [`What is ${mult1} times ${mult2}? `, mult1 * mult2];
 }
 
-function startQuiz() {
-  var q = makeQuestion();
-  document.getElementById("clickme").style.display = "none";
-  document.getElementById("quizForm").style.display = "block";
-  document.getElementById("question").innerHTML = q[0];
+function getAnswer() {
+  var ans = parseInt(document.getElementById('answer').value);
+  if (ans === question[1]) {
+    console.log("You got it!");
+  } else {
+    console.log("Not!");
+  }
 }
 
-function getAnswer() {
-  console.log(document.getElementById('answer').value);
+function startQuiz() {
+  document.getElementById("clickme").style.display = "none";
+  document.getElementById("quizForm").style.display = "block";
+  document.getElementById("question").innerHTML = question[0];
 }
