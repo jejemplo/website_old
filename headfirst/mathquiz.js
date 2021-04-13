@@ -17,8 +17,10 @@ function getAnswer() {
   var ans = parseInt(document.getElementById('answer').value);
   if (ans === question[1]) {
     console.log("You got it!");
+    document.getElementById("question").innerHTML = "You got it!";
   } else {
     console.log("Not!");
+    document.getElementById("question").innerHTML = "Not!";
   }
 }
 
