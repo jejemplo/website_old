@@ -14,17 +14,21 @@ function makeQuestion() {
 }
 
 function getAnswer() {
+  var message;
   var ans = parseInt(document.getElementById('answer').value);
+  guesses++;
+  document.getElementById("answer").style.display = "none";
+  document.getElementById("makeGuess").style.display = "none";
   if (ans === question[1]) {
-    console.log("You got it!");
-    document.getElementById("question").innerHTML = "You got it!";
+    message = "That's right - well done.";
+    correct++;
   } else {
-    console.log("Not!");
-    document.getElementById("question").innerHTML = "Not!";
+    message = `No. I'm afraid the answer is ${question[1]}.`;
   }
+  document.getElementById("question").innerHTML = message;
 }
 
-function startQuiz() {
+function runQuiz() {
   document.getElementById("clickme").style.display = "none";
   document.getElementById("quizForm").style.display = "block";
   document.getElementById("question").innerHTML = question[0];
