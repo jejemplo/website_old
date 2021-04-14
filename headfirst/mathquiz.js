@@ -26,10 +26,21 @@ function getAnswer() {
     message = `No. I'm afraid the answer is ${question[1]}.`;
   }
   document.getElementById("question").innerHTML = message;
+  if (guesses < 10) {
+    question = makeQuestion();
+    setTimeout(askQuestion, 3000);
+  } else {
+    message += "<br><br>I asked you 10 questions.<br>"
+    message += ` You got ${correct} of them right.`
+    document.getElementById("question").innerHTML = message;
+  }
 }
 
-function runQuiz() {
-  document.getElementById("clickme").style.display = "none";
-  document.getElementById("quizForm").style.display = "block";
-  document.getElementById("question").innerHTML = question[0];
+function askQuestion() {
+    document.getElementById("quizForm").reset();
+    document.getElementById("answer").style.display = "inline";
+    document.getElementById("makeGuess").style.display = "inline";
+    document.getElementById("clickme").style.display = "none";
+    document.getElementById("quizForm").style.display = "block";
+    document.getElementById("question").innerHTML = question[0];
 }
