@@ -44,8 +44,7 @@ linkStr += loc;
 linkStr += '?profile=css3">\n<strong> CSS </strong> Valid! </a>'
 console.log(linkStr);
 
-var footerLinks = document.getElementById('vLinks');
-// footerLinks.appendChild(linkStr);
+document.getElementById('vLinks').innerHTML = linkStr;
 </script>
 </head>
 <body>
@@ -83,9 +82,7 @@ demonstrate what we are learning in our web development class. Welcome!
 -->
 </main>
 
-<footer>
-<span id="vLinks"></span>
+<footer id="vLinks">
 </footer>
-
 </body>
 </html>
