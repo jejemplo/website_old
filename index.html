@@ -33,6 +33,17 @@ footer {
     margin-top: 1vw;
 }
 </style>
+<script>
+var loc = window.location.href;
+var linkStr = '<a href="http://validator.w3.org/check?uri=';
+linkStr += loc;
+linkStr += '">\n<strong> HTML </strong> Valid! </a> |';
+linkStr +=' <a href="http://jigsaw.w3.org/css-validator/validator?uri='
+linkStr += loc;
+linkStr += '?profile=css3">\n<strong> CSS </strong> Valid! </a>'
+var footerValidationLinks = document.getElementById("vLinks")
+footerValidationLinks.appendChild(linkStr);
+</script>
 </head>
 <body>
 <header>
@@ -70,10 +81,7 @@ demonstrate what we are learning in our web development class. Welcome!
 </main>
 
 <footer>
-<a href="http://validator.w3.org/check?uri=https://jejemplo.github.io/website/">
-<strong> HTML </strong> Valid! </a> |
-<a href="http://jigsaw.w3.org/css-validator/validator?uri=https://jejemplo.github.io/website/?profile=css3">
-<strong> CSS </strong> Valid! </a>
+<span id="vLinks"></span>
 </footer>
 
 </body>
